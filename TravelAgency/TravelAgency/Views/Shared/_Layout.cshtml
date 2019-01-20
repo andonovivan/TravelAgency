@@ -23,7 +23,7 @@
                 <div class="nav-wrapper">
                     <!-- <a href="#" class="brand-logo">Travelville</a> -->
 
-                    @Html.ActionLink("Travel Agency", "Index", "Home", new { area = "" }, new { @class = "brand-logo" })
+                    @Html.ActionLink("TravelAgency", "Index", "Home", new { area = "" }, new { @class = "brand-logo" })
 
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
@@ -66,12 +66,13 @@
         <li>
             <a href="#contact">Contact</a>
         </li>
+        @Html.Partial("_LoginPartial")
     </ul>
 
     <div>
         @RenderBody()
         <footer class="section teal darken-2 white-text center">
-            <p class="flow-text">Travel Agency &copy; 2019 </p>
+            <p class="flow-text">TravelAgency &copy; 2019 </p>
         </footer>
     </div>
 
