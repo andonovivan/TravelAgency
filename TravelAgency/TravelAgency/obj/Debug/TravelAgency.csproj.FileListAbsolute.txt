@@ -107,3 +107,5 @@ C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.CopyComplete
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.dll
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.pdb
+C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.InitialCreate.resources
+C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.GenerateResource.cache

@@ -29,5 +29,6 @@ namespace TravelAgency.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
