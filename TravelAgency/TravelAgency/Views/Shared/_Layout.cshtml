@@ -30,10 +30,10 @@
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="#home">Home</a>
+                            @Html.ActionLink("Home", "Index", "Home")
                         </li>
                         <li>
-                            <a href="#search">Search</a>
+                            @Html.ActionLink("Search", "VacationSearch", "Home")
                         </li>
                         <li>
                             <a href="#popular">Popular Places</a>
@@ -52,10 +52,10 @@
     </div>
     <ul class="sidenav" id="mobile-nav">
         <li>
-            <a href="#home">Home</a>
+            @Html.ActionLink("Home", "Index", "Home")
         </li>
         <li>
-            <a href="#search">Search</a>
+            @Html.ActionLink("Search", "VacationSearch", "Home")
         </li>
         <li>
             <a href="#popular">Popular Places</a>
@@ -101,14 +101,44 @@
         const ac = document.querySelector('.autocomplete');
         M.Autocomplete.init(ac, {
             data: {
-                "Aruba": null,
-                "Cancun Mexico": null,
-                "Hawaii": null,
-                "Florida": null,
-                "California": null,
-                "Jamacia": null,
-                "Europe": null,
+                "Paris, France": null,
+                "Yellowstone, USA": null,
+                "Rome, Italy": null,
+                "London, England": null,
+                "Phuket, Thailand": null,
+                "Grand Canyon, USA": null,
+                "Dubai, UAE": null,
+                "New York City, USA": null,
+                "Argentine Patagonia, Argentina": null,
+                "Barcelona, Spain": null,
+                "Yosemite, USA": null,
+                "Santorini, Greece": null,
+                "Maui, USA": null,
+                "Sydney, Australia": null,
+                "Hong Kong, China": null,
+                "Rio de Janeiro, Brazil": null,
+                "Florence, Italy": null,
+                "British Virgin Islands": null,
+                "Costa Rica": null,
+                "Bali, Indonesia": null,
+                "St. Lucia": null,
+                "Prague, Czech Republic": null,
+                "San Francisco, USA": null
             }
+        });
+
+        $(function () {
+            $("#autocomplete-input").keypress(function (e) {
+                if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                    $("#autocomplete-input").closest("form").submit();
+                }
+            });
+
+            /*
+            $("#autocomplete-input").mouseleave(function (e) {
+                $("#autocomplete-input").closest("form").submit();
+            });
+            */
         });
 
         // Material Boxed
