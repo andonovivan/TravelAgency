@@ -19,10 +19,10 @@
 @foreach (var item in Model)
 {
     <div class="col s12 m4">
-        <div class="card" style="height:520px">
+        <div class="card" style="height:550px">
             <div class="card-image">
-                <img src="@item.ImageUrl" alt="">
-                <span class="card-title">@item.City, @item.Country</span>
+                <img src="@item.ImageUrl" alt="" style="height: 300px; overflow: hidden">
+                <span class="card-title" style="font-weight:bolder">@Html.ActionLink(item.City + ", " + item.Country, "VacationDetails", "Home", new { id = item.VacationId }, new { @class = "white-text" })</span>
             </div>
             <div class="card-content">
                 @item.ShortDescription
