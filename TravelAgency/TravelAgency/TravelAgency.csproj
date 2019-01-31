@@ -191,6 +191,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\TravelAgency\Review.cs" />
     <Compile Include="Models\TravelAgency\Vacation.cs" />
+    <Compile Include="Models\TravelAgency\VacationDatabaseInitializer.cs" />
     <Compile Include="Models\TravelAgency\VacationDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

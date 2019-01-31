@@ -1,11 +1,10 @@
-using TravelAgency.Models.TravelAgency;
-
 namespace TravelAgency.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using TravelAgency.Models.TravelAgency;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TravelAgency.Models.TravelAgency.VacationDb>
     {
@@ -15,7 +14,7 @@ namespace TravelAgency.Migrations
             ContextKey = "TravelAgency.Models.TravelAgency.VacationDb";
         }
 
-        protected override void Seed(VacationDb context)
+        protected override void Seed(TravelAgency.Models.TravelAgency.VacationDb context)
         {
             context.Vacations.AddOrUpdate(r => r.City,
                 new Vacation
