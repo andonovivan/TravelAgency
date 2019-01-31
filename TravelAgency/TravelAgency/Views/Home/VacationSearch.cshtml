@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TravelAgency.Models.TravelAgency.Vacation>
+﻿
     @{
         ViewBag.Title = "VacationSearch";
     }
@@ -10,11 +10,12 @@
                 <div class="col s12">
                     <h3>Search Destinations</h3>
                     <div class="input-field">
-                        @using (Ajax.BeginForm("VacationSearch", "Home",
+                        @using (Ajax.BeginForm("VacationSearchPartial", "Home",
                         new AjaxOptions
                         {
                             InsertionMode = InsertionMode.Replace,
-                            HttpMethod = "GET"
+                            HttpMethod = "GET",
+                            UpdateTargetId = "vacations"
                         }))
                         {
                             <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Paris, London, etc..." name="search">
@@ -26,24 +27,15 @@
     </section>
 
 
-    <!-- Section: Popular Places -->
-    <section id="popular" class="section section-popular scrollspy">
+    <!-- Section: Vacations -->
+    <section class="section section-popular scrollspy">
         <div class="container">
-            <div class="row">
-                @foreach (var item in Model)
-                {
-                    <div class="col s12 m4">
-                        <div class="card" style="height:520px">
-                            <div class="card-image">
-                                <img src="@item.ImageUrl" alt="">
-                                <span class="card-title">@item.City, @item.Country</span>
-                            </div>
-                            <div class="card-content">
-                                @item.ShortDescription
-                            </div>
-                        </div>
-                    </div>
-                }
+            <div class="row" id="vacations">
+                
             </div>
         </div>
     </section>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>    
+}

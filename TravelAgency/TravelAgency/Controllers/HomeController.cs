@@ -16,9 +16,14 @@ namespace TravelAgency.Controllers
             return View();
         }
 
-        public ActionResult VacationSearch(string search)
+        public ActionResult VacationSearch()
         {
-            return View(db.Vacations.Where(x => (x.City + ", " + x.Country).Contains(search) || search == null));
+            return View();
+        }
+
+        public ActionResult VacationSearchPartial(string search)
+        {
+            return PartialView(db.Vacations.Where(x => (x.City + ", " + x.Country).Contains(search) || search == null));
         }
 
     }
