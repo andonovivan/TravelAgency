@@ -14,7 +14,7 @@ namespace TravelAgency.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(db.Vacations.ToList());
         }
 
         public ActionResult VacationSearch()

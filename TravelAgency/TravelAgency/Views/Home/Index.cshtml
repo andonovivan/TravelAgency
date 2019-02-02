@@ -14,7 +14,7 @@
             <!-- random image -->
             <div class="caption center-align">
                 <h2>Take Your Dream Vacation</h2>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, provident eos dicta unde debitis</h5>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">An upcoming vacation gives us something to eagerly anticipate.</h5>
             </div>
         </li>
         <li>
@@ -22,7 +22,7 @@
             <!-- random image -->
             <div class="caption left-align">
                 <h2>We Work With All Budgets</h2>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus inventore neque impedit</h5>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Save more on your next vacation. Thousands of deals made every day</h5>
             </div>
         </li>
         <li>
@@ -30,7 +30,7 @@
             <!-- random image -->
             <div class="caption right-align">
                 <h2>Group & Individual Getaways</h2>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum molestias excepturi doloremque</h5>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Whether you're lounging by the pool or chilling on the beach, jumping into waterfalls, or swimming with dolphins — your friends are right there with you</h5>
             </div>
         </li>
     </ul>
@@ -45,21 +45,21 @@
                     <div class="card-panel">
                         <i class="material-icons large teal-text">room</i>
                         <h4>Pick Where</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+                        <p>The world is a big place</p>
                     </div>
                 </div>
                 <div class="col s12 m4">
                     <div class="card-panel">
                         <i class="material-icons large teal-text">store</i>
                         <h4>Travel Shop</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+                        <p>Book early and enjoy great savings</p>
                     </div>
                 </div>
                 <div class="col s12 m4">
                     <div class="card-panel">
                         <i class="material-icons large teal-text">airplanemode_active</i>
                         <h4>Fly Cheap</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+                        <p>Top tips for finding a cheap flight</p>
                     </div>
                 </div>
             </div>
@@ -76,33 +76,33 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="~/Images/resort1.jpg" alt="">
-                            <span class="card-title">Cancun, Mexico</span>
+                            <img src="@Model.ElementAt(0).ImageUrl" alt="" style="height: 300px; overflow: hidden">
+                            <span class="card-title" style="font-weight:bolder">@Html.ActionLink(Model.ElementAt(0).City + ", " + Model.ElementAt(0).Country, "VacationDetails", "Home", new { id = Model.ElementAt(0).VacationId }, new { @class = "white-text" })</span>
                         </div>
                         <div class="card-content">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint perferendis.
+                            @Model.ElementAt(0).ShortDescription
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="~/Images/resort2.jpg" alt="">
-                            <span class="card-title">The Bahamas</span>
+                            <img src="@Model.ElementAt(Model.Count() - 1).ImageUrl" alt="" style="height: 300px; overflow: hidden">
+                            <span class="card-title" style="font-weight:bolder">@Html.ActionLink(Model.ElementAt(Model.Count() - 1).City + ", " + Model.ElementAt(Model.Count() - 1).Country, "VacationDetails", "Home", new { id = Model.ElementAt(Model.Count() - 1).VacationId }, new { @class = "white-text" })</span>
                         </div>
                         <div class="card-content">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint perferendis.
+                            @Model.ElementAt(Model.Count() - 1).ShortDescription
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="~/Images/resort3.jpg" alt="">
-                            <span class="card-title">Nova Scotia</span>
+                            <img src="@Model.ElementAt(7).ImageUrl" alt="" style="height: 300px; overflow: hidden">
+                            <span class="card-title" style="font-weight:bolder">@Html.ActionLink(Model.ElementAt(7).City + ", " + Model.ElementAt(7).Country, "VacationDetails", "Home", new { id = Model.ElementAt(7).VacationId }, new { @class = "white-text" })</span>
                         </div>
                         <div class="card-content">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint perferendis.
+                            @Model.ElementAt(7).ShortDescription
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h4>Follow Travel Agency</h4>
+                    <h4>Follow TravelAgency</h4>
                     <p>Follow us on social media for special offers</p>
                     <a href="#" class="white-text">
                         <i class="fab fa-facebook fa-4x"></i>
