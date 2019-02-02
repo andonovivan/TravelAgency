@@ -30,6 +30,8 @@ namespace TravelAgency.Models.TravelAgency
         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; }
 
+        public string ImageUrlDetailed { get; set; }
+
         public ICollection<Review> Reviews { get; set; }
 
     }
