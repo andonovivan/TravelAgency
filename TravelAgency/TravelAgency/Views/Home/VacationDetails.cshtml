@@ -7,10 +7,20 @@
 
 <link rel="stylesheet" href="~/Content/vacationDetails.css">
 <style>
-    .view-source {
+    .view-source1 {
         position: fixed;
         display: block;
         right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+    }
+
+    .view-source2 {
+        position: fixed;
+        display: block;
+        right: 80px;
         bottom: 0;
         margin-right: 40px;
         margin-bottom: 40px;
@@ -33,24 +43,67 @@
                         </div>
                         @if (Model.Reviews != null && Model.Reviews.Count() > 0)
                         {
-                        <ul class="collection">
-                            @foreach (var review in Model.Reviews)
-                            {
-                                <li class="collection-item avatar">
-                                    <i class="material-icons circle">insert_chart</i>
-                                    <span class="title">@review.ReviewerName</span>
-                                    <p>
-                                        @review.Description
-                                    </p>
-                                    <a href="#!" class="secondary-content" style="cursor: default"><span style="position:absolute; top: 1px; right: 25px;">@review.Rating</span><i class="material-icons">grade</i></a>
-                                </li>
-                            }
-                        </ul>
+                            <ul class="collection">
+                                @foreach (var review in Model.Reviews)
+                                {
+                                    <li class="collection-item avatar">
+                                        @{
+                                            if (review.Rating < 2)
+                                            {
+                                                <i class="material-icons circle">sentiment_very_dissatisfied</i>
+                                            }
+                                            else if (review.Rating < 3)
+                                            {
+                                                <i class="material-icons circle">sentiment_dissatisfied</i>
+                                            }
+                                            else if (review.Rating < 4)
+                                            {
+                                                <i class="material-icons circle">sentiment_neutral</i>
+                                            }
+                                            else if (review.Rating < 5)
+                                            {
+                                                <i class="material-icons circle">sentiment_satisfied</i>
+                                            }
+                                            else
+                                            {
+                                                <i class="material-icons circle">sentiment_very_satisfied</i>
+                                            }
+                                        }
+                                        <span class="title">@review.ReviewerName</span>
+                                        <p>
+                                            @review.Description
+                                        </p>
+                                        <a href="#!" class="secondary-content" style="cursor: default"><span style="position:absolute; top: 1px; right: 25px;">@review.Rating</span><i class="material-icons">grade</i></a>
+                                    </li>
+                                }
+                            </ul>
                         }
+
+                        <div id="writeReview"></div>
+
                     </div>
                 </div>
             </div>
         </main>
     </div>
 </div>
-<a href="@Url.Action("VacationSearch", "Home")" class="waves-effect waves-light btn view-source">Back</a>
+
+@using (Ajax.BeginForm("WriteReviewPartial", "Home",
+new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    HttpMethod = "GET",
+    UpdateTargetId = "writeReview"
+}))
+{
+    <a href="#" class="waves-effect waves-light btn view-source2" id="newReview">Write a review</a>
+    @Html.HiddenFor(model => model.VacationId)
+}
+
+<a href="@Url.Action("VacationSearch", "Home")" class="waves-effect waves-light btn view-source1">Back</a>
+
+
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}

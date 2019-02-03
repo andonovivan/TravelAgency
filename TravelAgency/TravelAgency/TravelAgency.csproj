@@ -189,9 +189,9 @@
     <Compile Include="Migrations\201902011108079_NewImageAttr.Designer.cs">
       <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902031430566_UpdateReview.cs" />
-    <Compile Include="Migrations\201902031430566_UpdateReview.Designer.cs">
-      <DependentUpon>201902031430566_UpdateReview.cs</DependentUpon>
+    <Compile Include="Migrations\201902032308274_UpdateReview.cs" />
+    <Compile Include="Migrations\201902032308274_UpdateReview.Designer.cs">
+      <DependentUpon>201902032308274_UpdateReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -277,6 +277,7 @@
     <Content Include="Views\Reviews\Edit.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
     <Content Include="Views\Home\VacationDetails.cshtml" />
+    <Content Include="Views\Home\WriteReviewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,8 +302,8 @@
     <EmbeddedResource Include="Migrations\201902011108079_NewImageAttr.resx">
       <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902031430566_UpdateReview.resx">
-      <DependentUpon>201902031430566_UpdateReview.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902032308274_UpdateReview.resx">
+      <DependentUpon>201902032308274_UpdateReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

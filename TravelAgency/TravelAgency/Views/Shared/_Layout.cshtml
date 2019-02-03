@@ -149,6 +149,14 @@
             $('.materialboxed').materialbox();
         });
 
+        $(function () {
+            $("#newReview").click(function () {
+                $("#newReview").closest("form").submit();
+                $(".view-source2").hide();
+                return false;
+            });
+        });
+
         // Material Boxed
         const mb = document.querySelectorAll('.materialboxed');
         M.Materialbox.init(mb, {});

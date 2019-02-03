@@ -23,8 +23,18 @@
             <div class="card-image">
                 <img src="@item.ImageUrl" alt="" style="height: 300px; overflow: hidden">
                 <span class="card-title" style="font-weight:bolder">@Html.ActionLink(item.City + ", " + item.Country, "VacationDetails", "Home", new { id = item.VacationId }, new { @class = "white-text" })</span>
+                <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">
+                    @if(item.Reviews == null || item.Reviews.Count() == 0)
+                    {
+                        <span>0.0</span>
+                    }
+                    else
+                    {
+                        <span>@Math.Round(item.Reviews.Average(x => x.Rating), 1)</span>
+                    }
+                </a>
             </div>
-            <div class="card-content">
+            <div class="card-content"  style="padding: 30px">
                 @item.ShortDescription
             </div>
         </div>

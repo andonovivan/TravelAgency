@@ -45,6 +45,29 @@ namespace TravelAgency.Controllers
             return View(vacation);
         }
 
+        public ActionResult WriteReviewPartial(Vacation vacation)
+        {
+            var model = new Review
+            {
+                VacationId = vacation.VacationId
+            };
+            return PartialView(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult WriteReviewPartial([Bind(Include = "ReviewId,Rating,Description,ReviewerName,VacationId")] Review review)
+        {
+            if (ModelState.IsValid)
+            {
+                review.Rating = Math.Round(review.Rating, 1);
+                db.Reviews.Add(review);
+                db.SaveChanges();
+            }
+            var model = db.Vacations.Find(review.VacationId);
+            return View("VacationDetails", model);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
