@@ -18,7 +18,6 @@ namespace TravelAgency.Models.TravelAgency
 
         public string ReviewerName { get; set; }
 
-        [Required]
         public int VacationId { get; set; }
     }
 }

@@ -24,7 +24,11 @@ namespace TravelAgency.Controllers
 
         public ActionResult VacationSearchPartial(string search)
         {
-            return PartialView(db.Vacations.Where(x => (x.City + ", " + x.Country).Contains(search) || search == null).ToList());
+            var model =
+                from v in db.Vacations
+                orderby v.Reviews.Average(review => review.Rating) descending
+                select v;
+            return PartialView(model.Where(x => (x.City + ", " + x.Country).Contains(search) || search == null).ToList());
         }
 
         public ActionResult VacationDetails(int? id)
@@ -33,7 +37,7 @@ namespace TravelAgency.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vacation vacation = db.Vacations.Find(id);
+            var vacation = db.Vacations.Find(id);
             if (vacation == null)
             {
                 return HttpNotFound();

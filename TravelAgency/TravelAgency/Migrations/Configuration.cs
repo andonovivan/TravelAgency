@@ -5,6 +5,7 @@ namespace TravelAgency.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using TravelAgency.Models.TravelAgency;
+    using System.Collections.Generic;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TravelAgency.Models.TravelAgency.VacationDb>
     {
@@ -25,7 +26,7 @@ namespace TravelAgency.Migrations
                     ShortDescription = "Every day, the magnetic City of Light draws visitors who travel from around the globe to see iconic attractions like the Eiffel Tower, the Louvre and Notre Dame in real life. But what travelers really fall in love with are the city's quaint cafes, vibrant markets, trendy shopping districts and unmistakable je ne sais quoi charm.",
                     LongDescription = "The City of Light draws millions of visitors every year with its unforgettable ambiance. Of course, the divine cuisine and vast art collections deserve some of the credit as well. The gentle River Seine rambles through the city, flanked by stately museums, centuries-old churches, and blocks of Rococo- and Neoclassic-design architecture, further enhanced by cascading trees and glowing streetlamps. Peppering the Seine's cobbled walks and graceful bridges are impossibly chic Parisians, probably on their way to the market, cafe or cinema. Containing world-class museums, fashion, cuisine and an atmosphere all its own, Paris is also a city of 'many splendors,' as Ernest Hemingway recalled in his memoir, 'A Moveable Feast.' Visit the beloved Musée d'Orsay, shop the biggest designers on the Champs Élysées or hit the boutiques in Le Marais, take in the view atop the Eiffel Tower, or even plan a day trip to Versailles Palace. But don't miss out on the simple pleasure of meandering the marvelous arrondssements (districts), or snacking on street crepes either.",
                     ImageUrl = "https://travel.usnews.com/static-travel/images/destinations/86/gettyimages-615356742.jpg",
-                    ImageUrlDetailed = "https://images.pexels.com/photos/1782567/pexels-photo-1782567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    ImageUrlDetailed = "https://images.pexels.com/photos/1782567/pexels-photo-1782567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                 },
                 new Vacation
                 {

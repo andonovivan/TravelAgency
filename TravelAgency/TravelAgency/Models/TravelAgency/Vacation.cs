@@ -32,7 +32,7 @@ namespace TravelAgency.Models.TravelAgency
 
         public string ImageUrlDetailed { get; set; }
 
-        public ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
     }
 }
