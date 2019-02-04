@@ -22,7 +22,7 @@ namespace TravelAgency.Controllers
             return View();
         }
 
-        public ActionResult VacationSearchPartial(string search)
+        public ActionResult VacationSearchPartial(string search, int? page)
         {
             var model =
                 from v in db.Vacations

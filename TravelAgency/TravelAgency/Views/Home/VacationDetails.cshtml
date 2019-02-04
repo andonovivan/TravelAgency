@@ -36,7 +36,7 @@
                     <div class="card">
                         <div class="card-image">
                             <img src="@Model.ImageUrlDetailed" alt="" style="height: 700px; overflow: hidden" class="materialboxed">
-                            <span class="card-title" style="font-weight:bolder">@Model.City, @Model.Country</span>
+                            <span class="card-title title-name" style="font-weight:bolder">@Model.City, @Model.Country</span>
                         </div>
                         <div class="card-content">
                             @Model.LongDescription
@@ -73,7 +73,7 @@
                                         <p>
                                             @review.Description
                                         </p>
-                                        <a href="#!" class="secondary-content" style="cursor: default"><span style="position:absolute; top: 1px; right: 25px;">@review.Rating</span><i class="material-icons">grade</i></a>
+                                        <a href="#!" class="secondary-content" style="cursor: default"><span style="position:absolute; top: 1px; right: 25px;">@Math.Round(review.Rating, 1)</span><i class="material-icons">grade</i></a>
                                     </li>
                                 }
                             </ul>

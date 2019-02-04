@@ -12,6 +12,7 @@ namespace TravelAgency.Models.TravelAgency
         public int ReviewId { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:0.0}", ApplyFormatInEditMode = true)]
         public decimal Rating { get; set; }
 
         [Required]
