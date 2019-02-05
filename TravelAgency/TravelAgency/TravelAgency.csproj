@@ -18,7 +18,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -192,9 +193,9 @@
     <Compile Include="Migrations\201902011108079_NewImageAttr.Designer.cs">
       <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902032308274_UpdateReview.cs" />
-    <Compile Include="Migrations\201902032308274_UpdateReview.Designer.cs">
-      <DependentUpon>201902032308274_UpdateReview.cs</DependentUpon>
+    <Compile Include="Migrations\201902051112004_TestAuthorization.cs" />
+    <Compile Include="Migrations\201902051112004_TestAuthorization.Designer.cs">
+      <DependentUpon>201902051112004_TestAuthorization.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -305,8 +306,8 @@
     <EmbeddedResource Include="Migrations\201902011108079_NewImageAttr.resx">
       <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902032308274_UpdateReview.resx">
-      <DependentUpon>201902032308274_UpdateReview.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902051112004_TestAuthorization.resx">
+      <DependentUpon>201902051112004_TestAuthorization.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

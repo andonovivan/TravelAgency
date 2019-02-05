@@ -3,7 +3,7 @@ namespace TravelAgency.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class UpdateReview : DbMigration
+    public partial class TestAuthorization : DbMigration
     {
         public override void Up()
         {

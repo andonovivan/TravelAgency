@@ -13,6 +13,7 @@ namespace TravelAgency.Models.TravelAgency
 
         [Required]
         [DisplayFormat(DataFormatString = "{0:0.0}", ApplyFormatInEditMode = true)]
+        [Range(1, 10)]
         public decimal Rating { get; set; }
 
         [Required]

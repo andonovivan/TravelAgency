@@ -10,6 +10,7 @@ using TravelAgency.Models.TravelAgency;
 
 namespace TravelAgency.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class ReviewsController : Controller
     {
         private VacationDb db = new VacationDb();

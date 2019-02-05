@@ -7,13 +7,13 @@ namespace TravelAgency.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class UpdateReview : IMigrationMetadata
+    public sealed partial class TestAuthorization : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateReview));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TestAuthorization));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902032308274_UpdateReview"; }
+            get { return "201902051112004_TestAuthorization"; }
         }
         
         string IMigrationMetadata.Source
