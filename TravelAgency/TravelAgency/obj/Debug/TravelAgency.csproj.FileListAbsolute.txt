@@ -107,9 +107,8 @@ C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.CopyComplete
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.dll
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.pdb
-C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.InitialCreate.resources
-C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.GenerateResource.cache
-C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.NewImageAttr.resources
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\bin\PagedList.dll
 C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\bin\PagedList.xml
-C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.TestAuthorization.resources
+C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.Init.resources
+C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.GenerateResource.cache
+C:\Users\Ivan Andonov\Documents\TravelAgency\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Migrations.ChangeReview.resources

@@ -48,19 +48,19 @@
                                 {
                                     <li class="collection-item avatar">
                                         @{
-                                            if (review.Rating < 2)
+                                            if (review.Rating <= 2)
                                             {
                                                 <i class="material-icons circle">sentiment_very_dissatisfied</i>
                                             }
-                                            else if (review.Rating < 3)
+                                            else if (review.Rating <= 4)
                                             {
                                                 <i class="material-icons circle">sentiment_dissatisfied</i>
                                             }
-                                            else if (review.Rating < 4)
+                                            else if (review.Rating <= 6)
                                             {
                                                 <i class="material-icons circle">sentiment_neutral</i>
                                             }
-                                            else if (review.Rating < 5)
+                                            else if (review.Rating <= 8)
                                             {
                                                 <i class="material-icons circle">sentiment_satisfied</i>
                                             }

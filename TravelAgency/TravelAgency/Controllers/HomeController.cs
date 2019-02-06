@@ -1,16 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using TravelAgency.Models;
 using TravelAgency.Models.TravelAgency;
 
 namespace TravelAgency.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private VacationDb db = new VacationDb();
+        private ApplicationDbContext db1 = new ApplicationDbContext();
 
         public ActionResult Index()
         {
@@ -47,9 +51,12 @@ namespace TravelAgency.Controllers
 
         public ActionResult WriteReviewPartial(Vacation vacation)
         {
+            var currUser = db1.Users.Find(User.Identity.GetUserId());
+
             var model = new Review
             {
-                VacationId = vacation.VacationId
+                VacationId = vacation.VacationId,
+                ReviewerName = currUser.Name
             };
             return PartialView(model);
         }

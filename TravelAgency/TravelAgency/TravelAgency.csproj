@@ -185,17 +185,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901201833191_InitialCreate.cs" />
-    <Compile Include="Migrations\201901201833191_InitialCreate.Designer.cs">
-      <DependentUpon>201901201833191_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201902061357240_Init.cs" />
+    <Compile Include="Migrations\201902061357240_Init.Designer.cs">
+      <DependentUpon>201902061357240_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902011108079_NewImageAttr.cs" />
-    <Compile Include="Migrations\201902011108079_NewImageAttr.Designer.cs">
-      <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902051112004_TestAuthorization.cs" />
-    <Compile Include="Migrations\201902051112004_TestAuthorization.Designer.cs">
-      <DependentUpon>201902051112004_TestAuthorization.cs</DependentUpon>
+    <Compile Include="Migrations\201902061455023_ChangeReview.cs" />
+    <Compile Include="Migrations\201902061455023_ChangeReview.Designer.cs">
+      <DependentUpon>201902061455023_ChangeReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -300,14 +296,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901201833191_InitialCreate.resx">
-      <DependentUpon>201901201833191_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902061357240_Init.resx">
+      <DependentUpon>201902061357240_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902011108079_NewImageAttr.resx">
-      <DependentUpon>201902011108079_NewImageAttr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902051112004_TestAuthorization.resx">
-      <DependentUpon>201902051112004_TestAuthorization.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902061455023_ChangeReview.resx">
+      <DependentUpon>201902061455023_ChangeReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

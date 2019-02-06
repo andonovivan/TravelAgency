@@ -19,8 +19,6 @@ namespace TravelAgency.Models.TravelAgency
         [Required]
         public string Description { get; set; }
 
-        [Required]
-        [Display(Name = "Reviewer Name")]
         public string ReviewerName { get; set; }
 
         public int VacationId { get; set; }
