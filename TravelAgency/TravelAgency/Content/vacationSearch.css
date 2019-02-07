@@ -1,0 +1,27 @@
+﻿#autocomplete-input {
+    width: 80% !important;
+    float: left;
+    margin-left: 4%;
+}
+
+#btn-search {
+    float: right;
+    width: 70px !important;
+    height: 60px;
+    text-transform: none !important;
+    margin-right: 7.5%;
+    border: none !important
+}
+
+@media screen and (max-width: 600px){
+    #btn-search {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #autocomplete-input {
+        width: 100%;
+        float: none;
+    }
+}

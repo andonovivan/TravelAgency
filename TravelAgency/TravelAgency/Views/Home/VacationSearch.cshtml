@@ -1,41 +1,44 @@
 ﻿
-    @{
-        ViewBag.Title = "VacationSearch";
-    }
+@{
+    ViewBag.Title = "VacationSearch";
+}
 
-    <!-- Section: Search -->
-    <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h3>Search Destinations</h3>
-                    <div class="input-field">
-                        @using (Ajax.BeginForm("VacationSearchPartial", "Home",
-                        new AjaxOptions
-                        {
-                            InsertionMode = InsertionMode.Replace,
-                            HttpMethod = "GET",
-                            UpdateTargetId = "vacations"
-                        }))
-                        {
-                            <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Paris, London, etc..." name="search">
-                        }
-                    </div>
+<link rel="stylesheet" href="~/Content/vacationSearch.css" />
+
+<!-- Section: Search -->
+<section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3>Search Destinations</h3>
+                <div class="input-field" style="display: inline-block; width: 100%">
+                    @using (Ajax.BeginForm("VacationSearchPartial", "Home",
+                    new AjaxOptions
+                    {
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "GET",
+                        UpdateTargetId = "vacations"
+                    }))
+                    {
+                        <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Paris, London, etc..." name="search">
+                        <input type="submit" class="btn" id="btn-search" value="Search"/>
+                    }
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- Section: Vacations -->
-    <section class="section section-popular scrollspy">
-        <div class="container">
-            <div class="row pagination" id="vacations">
-                
-            </div>
+<!-- Section: Vacations -->
+<section class="section section-popular scrollspy">
+    <div class="container">
+        <div class="row pagination" id="vacations">
+
         </div>
-    </section>
+    </div>
+</section>
 
 @section Scripts {
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>    
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 }
