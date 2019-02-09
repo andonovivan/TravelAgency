@@ -10,7 +10,7 @@
     height: 60px;
     text-transform: none !important;
     margin-right: 7.5%;
-    border: none !important
+    border: none !important;
 }
 
 @media screen and (max-width: 600px){
